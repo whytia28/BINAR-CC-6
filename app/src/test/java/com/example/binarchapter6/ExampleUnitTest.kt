@@ -1,4 +1,4 @@
-package com.example.gamesuit
+package com.example.binarchapter6
 
 import org.junit.Test
 

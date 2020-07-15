@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GameSuit</string>
+    <string name="app_name">Binar CC 6</string>
     <string name="logo">logo</string>
     <string name="keluar">EXIT</string>
     <string name="batu">rock</string>
@@ -30,12 +30,27 @@
     <string name="cpu_menang">CPU WIN!!!</string>
     <string name="hasil_draw">DRAW!!!</string>
     <string name="selamat_pemain_2_menang">PLAYER 2 WIN!!!</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="prepare_yourself">Prepare Yourself!</string>
     <string name="login">Login</string>
     <string name="reset">Reset</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login_failed">Email and password did\'nt match </string>
+    <string name="login_success">Login successful </string>
+    <string name="field_empty">Email and password can\'t be blank </string>
+    <string name="button_profile">Button Profile</string>
+    <string name="profile_data">PROFILE DATA</string>
+    <string name="button_back">Button back</string>
+    <string name="name">Name</string>
+    <string name="your_memo_data">YOUR MEMO</string>
+    <string name="memo">Memo</string>
+    <string name="add_memo">Add Your Memo</string>
+    <string name="date">Date</string>
+    <string name="btnadd_memo">Add Memo</string>
+    <string name="add__memo_success">Add Memo Successful</string>
+    <string name="add_memo_failed">Add Memo Failed</string>
 
 </resources>

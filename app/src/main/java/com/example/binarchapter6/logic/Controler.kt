@@ -1,4 +1,4 @@
-package com.example.gamesuit.logic
+package com.example.binarchapter6.logic
 
 
 class Controler {

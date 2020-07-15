@@ -1,8 +1,8 @@
-package com.example.gamesuit.welcome
+package com.example.binarchapter6.welcome
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.gamesuit.R
+import com.example.binarchapter6.R
 
 class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

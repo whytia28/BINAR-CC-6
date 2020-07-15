@@ -1,18 +1,18 @@
-package com.example.gamesuit.areaMain
+package com.example.binarchapter6.areaMain
 
-
-
-import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gamesuit.MainActivity
-import com.example.gamesuit.R
-import com.example.gamesuit.logic.Controler
-import kotlinx.android.synthetic.main.activity_pemain_vs_pemain.*
+import android.os.Bundle
+import android.os.Handler
+import com.example.binarchapter6.activity.MainActivity
+import com.example.binarchapter6.R
+import com.example.binarchapter6.logic.Controler
+import kotlinx.android.synthetic.main.activity_pemain_vs_cpu.*
 import kotlinx.android.synthetic.main.custom_alert_dialog.*
 import kotlinx.android.synthetic.main.custom_alert_dialog.view.*
 
-class PemainVsPemain : AppCompatActivity() {
+
+class PemainVsCpu : AppCompatActivity() {
 
     private var pilihanSatu: String = ""
     private var pilihanDua: String = ""
@@ -20,56 +20,56 @@ class PemainVsPemain : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pemain_vs_pemain)
+        setContentView(R.layout.activity_pemain_vs_cpu)
 
         pemain1.text = nama
 
         batu1.setOnClickListener {
-            pilihanSatu = "batu"
+            pilihanSatu = Controler.pilihanGame[0]
             showResult()
             batu1.foreground = resources.getDrawable(R.drawable.overlay, null)
         }
+
         kertas1.setOnClickListener {
-            pilihanSatu = "kertas"
+            pilihanSatu = Controler.pilihanGame[1]
             showResult()
             kertas1.foreground = resources.getDrawable(R.drawable.overlay, null)
         }
+
         gunting1.setOnClickListener {
-            pilihanSatu = "gunting"
+            pilihanSatu = Controler.pilihanGame[2]
             showResult()
             gunting1.foreground = resources.getDrawable(R.drawable.overlay, null)
-        }
-        batu2.setOnClickListener {
-            pilihanDua = "batu"
-            showResult()
-            batu2.foreground = resources.getDrawable(R.drawable.overlay, null)
-        }
-        kertas2.setOnClickListener {
-            pilihanDua = "kertas"
-            showResult()
-            kertas2.foreground = resources.getDrawable(R.drawable.overlay, null)
-        }
-        gunting2.setOnClickListener {
-            pilihanDua = "gunting"
-            showResult()
-            gunting2.foreground = resources.getDrawable(R.drawable.overlay, null)
         }
     }
 
     private fun showResult() {
         val pemenang: String
-        if (pilihanSatu != "" && pilihanDua != "") {
+        if (pilihanSatu != "") {
             val control = Controler()
-            val hasilMain = control.caraMain(pilihanSatu, pilihanDua)
+            val hasilMain = control.caraMainCpu(pilihanSatu)
             pemenang = when (hasilMain) {
                 "pemain 1 menang" -> {
                     getString(R.string.selamat_kamu_menang, nama)
                 }
-                "pemain 2 menang" -> {
-                    getString(R.string.selamat_pemain_2_menang)
+                "CPU 2 menang" -> {
+                    getString(R.string.cpu_menang)
                 }
                 else -> {
                     getString(R.string.hasil_draw)
+                }
+            }
+            when (Controler.pilihanCpu) {
+                Controler.pilihanGame[0] -> {
+                    batu2.foreground = resources.getDrawable(R.drawable.overlay, null)
+                }
+
+                Controler.pilihanGame[1] -> {
+                    kertas2.foreground = resources.getDrawable(R.drawable.overlay, null)
+                }
+
+                Controler.pilihanGame[2] -> {
+                    gunting2.foreground = resources.getDrawable(R.drawable.overlay, null)
                 }
             }
             val builder = AlertDialog.Builder(this)
@@ -78,13 +78,17 @@ class PemainVsPemain : AppCompatActivity() {
             builder.setCustomTitle(hasil)
             dialog.selamat.text = pemenang
             val dialogMessage = builder.create()
-            dialogMessage.show()
+            val handler = Handler()
+            handler.postDelayed({
+                kotlin.run {
+                    dialogMessage.show()
+                }
+            }, 1000)
             dialog.btn_exit.setOnClickListener {
                 dialogMessage.dismiss()
                 startNew()
             }
         }
-
     }
 
     private fun startNew() {

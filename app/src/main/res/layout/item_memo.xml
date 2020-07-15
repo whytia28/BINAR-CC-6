@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/TexContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/et_email"
+                android:text="@string/date" />
+
+            <EditText
+                android:id="@+id/et_date"
+                style="@style/MyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/email"
+                android:inputType="datetime"
+                android:labelFor="@id/et_date"
+                android:textSize="20sp"
+                android:theme="@style/MyEditText" />
+
+            <TextView
+                android:id="@+id/tv_memo"
+                style="@style/TexContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/memo" />
+
+            <EditText
+                android:id="@+id/et_memo"
+                style="@style/MyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/memo"
+                android:inputType="textMultiLine"
+                android:labelFor="@id/et_memo"
+                android:textSize="20sp"
+                android:theme="@style/MyEditText" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
