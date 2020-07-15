@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/add_memo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TexContent"
+        android:layout_marginTop="20dp"
+        android:text="@string/date" />
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditText"
+        android:textSize="20sp"
+        android:labelFor="@id/edt_add_memo"
+        android:autofillHints="@string/memo"
+        android:inputType="datetime"
+        android:enabled="false"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TexContent"
+        android:layout_marginTop="20dp"
+        android:text="@string/memo" />
+
+    <EditText
+        android:id="@+id/edt_add_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditText"
+        android:textSize="20sp"
+        android:labelFor="@id/edt_add_memo"
+        android:autofillHints="@string/memo"
+        android:inputType="textMultiLine" />
+
+
+    <Button
+        android:id="@+id/btn_add_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnadd_memo"
+        android:background="@drawable/ripple_effect"
+        android:layout_gravity="center" />
+
+
+</LinearLayout>

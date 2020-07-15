@@ -1,4 +1,4 @@
-package com.example.gamesuit.welcome
+package com.example.binarchapter6.welcome
 
 
 import android.content.Intent
@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.gamesuit.LoginActivity
-import com.example.gamesuit.R
+import com.example.binarchapter6.activity.LoginActivity
+import com.example.binarchapter6.R
 import kotlinx.android.synthetic.main.fragment_prepare.*
 
 

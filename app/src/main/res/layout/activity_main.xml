@@ -5,29 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="192dp"
-        android:layout_height="192dp"
-        android:layout_marginTop="44dp"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/logo2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".activity.MainActivity">
 
     <ImageView
         android:id="@+id/pemainvspemain"
         android:layout_width="0dp"
         android:layout_height="128dp"
-        android:layout_marginTop="30dp"
         android:contentDescription="@string/pemain_lawan_pemain"
         android:src="@drawable/pemain"
-        app:layout_constraintEnd_toEndOf="@id/logo"
-        app:layout_constraintStart_toStartOf="@id/logo"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
 
     <TextView
         android:id="@+id/tv_pemain"
@@ -36,6 +24,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:hint="@string/pemain_vs_pemain"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/pemainvspemain"
         app:layout_constraintStart_toStartOf="@id/pemainvspemain"
         app:layout_constraintTop_toBottomOf="@id/pemainvspemain" />
@@ -58,6 +47,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:hint="@string/pemain_vs_cpu"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/pemainvscpu"
         app:layout_constraintStart_toStartOf="@id/pemainvscpu"
         app:layout_constraintTop_toBottomOf="@id/pemainvscpu" />
@@ -72,7 +62,22 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </Button>
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_profile"
+        android:padding="5dp"
+        android:src="@drawable/person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
