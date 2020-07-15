@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameSuit</string>
+    <string name="keluar">KELUAR</string>
+    <string name="batu">batu</string>
+    <string name="kertas">kertas</string>
+    <string name="gunting">gunting</string>
+    <string name="pemain_1">Pemain 1</string>
+    <string name="pemain2">PEMAIN 2</string>
+    <string name="logo">logo</string>
+    <string name="logo_game">Logo permainan</string>
+    <string name="pemain_lawan_pemain">Pemain lawan pemain</string>
+    <string name="silakan_input_nama">Silakan input nama</string>
+    <string name="bermain_suit_melawan_sesama_pemain">Bermain melawan sesama pemain</string>
+    <string name="bermain_melawan_komputer">Bermain melawan komputer</string>
+    <string name="masukkan_namamu_di_bawah">Masukkan namamu di bawah</string>
+    <string name="pemain_vs_pemain">Pemain vs Pemain</string>
+    <string name="pemain_vs_cpu">Pemain vs CPU</string>
+    <string name="cpu">CPU</string>
+    <string name="vs_pemain">%1$s vs PEMAIN</string>
+    <string name="vs_cpu">%1$s vs CPU</string>
+    <string name="nama_tidak_boleh_kosong">Nama tidak boleh kosong</string>
+    <string name="hasil">HASIL</string>
+    <string name="selamat_kamu_menang">%1$s MENANG!!!</string>
+    <string name="ok">OK</string>
+    <string name="cpu_menang">CPU MENANG!!!</string>
+    <string name="hasil_draw">SERI!!!</string>
+    <string name="selamat_pemain_2_menang">PEMAIN 2 MENANG!!!</string>
+</resources>

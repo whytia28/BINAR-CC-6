@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">GameSuit</string>
+    <string name="logo">logo</string>
+    <string name="keluar">EXIT</string>
+    <string name="batu">rock</string>
+    <string name="kertas">paper</string>
+    <string name="gunting">scissor</string>
+    <string name="pemain_1">Player 1</string>
+    <string name="pemain2">PLAYER 2</string>
+    <string name="logo_game">Logo Game</string>
+    <string name="pemain_lawan_pemain">Player vs player</string>
+    <string name="slide_1_of_3" translatable="false">Slide 1 of 3</string>
+    <string name="slide_2_of_3" translatable="false">Slide 2 of 3</string>
+    <string name="next_slide" translatable="false">Next slide</string>
+    <string name="slide_3_of_3" translatable="false">Slide 3 of 3</string>
+    <string name="silakan_input_nama">Please input name</string>
+    <string name="bermain_suit_melawan_sesama_pemain">Playing match versus player</string>
+    <string name="bermain_melawan_komputer">Playing match versus CPU</string>
+    <string name="masukkan_namamu_di_bawah">Fill your name below</string>
+    <string name="pemain_vs_pemain">Player vs Player</string>
+    <string name="pemain_vs_cpu">Player vs CPU</string>
+    <string name="cpu">CPU</string>
+    <string name="vs_pemain">%1$s vs PLAYER</string>
+    <string name="vs_cpu">%1$s vs CPU</string>
+    <string name="vs" translatable="false">VS</string>
+    <string name="nama_tidak_boleh_kosong">Name can\'t be empty</string>
+    <string name="hasil">RESULT</string>
+    <string name="selamat_kamu_menang">%1$s WIN!!!</string>
+    <string name="ok">OK</string>
+    <string name="cpu_menang">CPU WIN!!!</string>
+    <string name="hasil_draw">DRAW!!!</string>
+    <string name="selamat_pemain_2_menang">PLAYER 2 WIN!!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="prepare_yourself">Prepare Yourself!</string>
+    <string name="login">Login</string>
+    <string name="reset">Reset</string>
+
+</resources>
