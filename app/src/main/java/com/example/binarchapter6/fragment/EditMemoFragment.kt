@@ -20,10 +20,10 @@ class EditMemoFragment : DialogFragment(), View.OnClickListener {
 
     private lateinit var objMemo: Memo
     private var memoDb: MemoDatabase? = null
+
     companion object {
-        fun newInstance(title: String, objMemo: Memo): EditMemoFragment {
+        fun newInstance(objMemo: Memo): EditMemoFragment {
             val args = Bundle()
-            args.putString("title", title)
             objMemo.id?.let { it1 -> args.putInt("id", it1) }
             args.putString("memo", objMemo.memo)
             args.putString("date", objMemo.date)
@@ -32,7 +32,6 @@ class EditMemoFragment : DialogFragment(), View.OnClickListener {
             return fragment
         }
     }
-
 
 
     override fun onCreateView(
@@ -52,7 +51,7 @@ class EditMemoFragment : DialogFragment(), View.OnClickListener {
             val id = args?.getInt("id", 0)
             val memo = args?.getString("memo", "memo")
             val date = args?.getString("date", "date")
-             objMemo = Memo(id, memo, date)
+            objMemo = Memo(id, memo, date)
         }
     }
 
@@ -66,8 +65,6 @@ class EditMemoFragment : DialogFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val title = arguments?.getString("title", "Title")
-        dialog?.setTitle(title)
         edt_add_memo.requestFocus()
         dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.MATCH_PARENT)
 

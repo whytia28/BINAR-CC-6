@@ -24,9 +24,9 @@ class PemainFragment : Fragment() {
             val mCpuFragment = CpuFragment()
             val mFragmentManager = parentFragmentManager
             mFragmentManager.beginTransaction().apply {
-               replace(R.id.frame_container, mCpuFragment, CpuFragment::class.java.simpleName)
-                   .addToBackStack(null)
-                   .commit()
+                replace(R.id.frame_container, mCpuFragment, CpuFragment::class.java.simpleName)
+                    .addToBackStack(null)
+                    .commit()
             }
         }
     }

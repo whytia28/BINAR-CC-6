@@ -12,5 +12,5 @@ import kotlinx.android.parcel.Parcelize
 data class Memo(
     @PrimaryKey(autoGenerate = true) var id: Int?,
     @ColumnInfo(name = "memo") var memo: String?,
-    @ColumnInfo(name = "date")var date: String?
+    @ColumnInfo(name = "date") var date: String?
 ) : Parcelable

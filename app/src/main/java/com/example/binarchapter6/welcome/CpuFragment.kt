@@ -24,7 +24,11 @@ class CpuFragment : Fragment() {
             val mInputNamaFragment = PrepareFragment()
             val mFragmentManager = parentFragmentManager
             mFragmentManager.beginTransaction().apply {
-                replace(R.id.frame_container, mInputNamaFragment, PrepareFragment::class.java.simpleName)
+                replace(
+                    R.id.frame_container,
+                    mInputNamaFragment,
+                    PrepareFragment::class.java.simpleName
+                )
                     .addToBackStack(null)
                     .commit()
             }

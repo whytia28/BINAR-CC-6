@@ -68,7 +68,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.fab_add -> {
                 val pop = MemoFragment()
-                    .newInstance(getString(R.string.add_memo))
+                    .newInstance()
                 val fragmentManager = supportFragmentManager
                 pop.show(fragmentManager, "fragment_dialog")
             }

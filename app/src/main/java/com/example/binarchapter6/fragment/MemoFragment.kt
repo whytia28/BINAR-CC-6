@@ -19,9 +19,8 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
 
     private var memoDb: MemoDatabase? = null
 
-    fun newInstance(title: String): MemoFragment {
+    fun newInstance(): MemoFragment {
         val args = Bundle()
-        args.putString("title", title)
         val fragment = MemoFragment()
         fragment.arguments = args
         return fragment
@@ -37,8 +36,6 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val title = arguments?.getString("title", "Title")
-        dialog?.setTitle(title)
         edt_add_memo.requestFocus()
         dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.MATCH_PARENT)
 

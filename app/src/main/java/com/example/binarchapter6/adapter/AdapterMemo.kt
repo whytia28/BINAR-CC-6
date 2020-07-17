@@ -35,7 +35,7 @@ class AdapterMemo(private val listMemo: List<Memo>) :
                 et_add_memo.setText(memo.memo)
                 cv_item_memo.setOnClickListener {
                     val activity = itemView.context as ProfileActivity
-                    val dialog = EditMemoFragment.newInstance("Edit Your Memo", memo)
+                    val dialog = EditMemoFragment.newInstance(memo)
                     dialog.show(activity.supportFragmentManager, "Dialog Edit Fragment")
 
                 }
@@ -44,7 +44,7 @@ class AdapterMemo(private val listMemo: List<Memo>) :
     }
 }
 
-private operator fun Bundle?.invoke(args: Bundle?) {
+private operator fun Bundle?.invoke() {
 
 
 }
