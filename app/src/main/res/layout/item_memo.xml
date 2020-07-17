@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_item_memo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TexContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/et_email"
+            android:text="@string/date" />
+
+        <EditText
+            android:id="@+id/et_memo_date"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/email"
+            android:inputType="datetime"
+            android:labelFor="@id/et_memo_date"
+            android:textSize="20sp"
+            android:theme="@style/MyEditText" />
+
+        <TextView
+            style="@style/TexContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/memo" />
+
+        <EditText
+            android:id="@+id/et_add_memo"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/memo"
+            android:inputType="textMultiLine"
+            android:labelFor="@id/et_add_memo"
+            android:textSize="20sp"
+            android:theme="@style/MyEditText" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
