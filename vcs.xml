@@ -22,6 +22,10 @@
           <option name="url" value="https://github.com/dicodingacademy/a14-made-labs4.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/fmilano2019/GithubUserApp.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\Dicoding" />
