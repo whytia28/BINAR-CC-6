@@ -9,7 +9,6 @@
     tools:context=".activity.ProfileActivity">
 
     <View
-        android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/colorPrimary"
@@ -106,10 +105,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_memo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintTop_toBottomOf="@id/tv_data_memo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_memo"/>
 
 

@@ -11,7 +11,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="@string/add_memo" />
+        android:text="@string/edit_your_memo" />
 
     <TextView
         android:layout_width="match_parent"
@@ -28,8 +28,7 @@
         android:textSize="20sp"
         android:labelFor="@id/edt_date"
         android:autofillHints="@string/memo"
-        android:inputType="datetime"
-        android:enabled="false"/>
+        android:inputType="datetime" />
 
     <TextView
         android:layout_width="match_parent"
@@ -48,18 +47,27 @@
         android:autofillHints="@string/memo"
         android:inputType="textMultiLine" />
 
-        <Button
-            android:id="@+id/btn_add_memo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/btnadd_memo"
-            android:background="@drawable/ripple_effect" />
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/cancel"
-            android:background="@drawable/ripple_effect" />
+    <Button
+        android:id="@+id/btn_update_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/update"
+        android:background="@drawable/ripple_effect" />
+
+    <Button
+        android:id="@+id/btn_delete_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/delete"
+        android:background="@drawable/ripple_effect" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cancel"
+        android:background="@drawable/ripple_effect" />
 </LinearLayout>

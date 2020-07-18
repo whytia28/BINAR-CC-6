@@ -7,6 +7,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.binarchapter6.fragment.MemoFragment
 import com.example.binarchapter6.R
+import com.example.binarchapter6.adapter.AdapterMemo
 import com.example.binarchapter6.database.MemoDatabase
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.coroutines.GlobalScope
@@ -21,12 +22,19 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_profile)
 
         showProfile()
+        fetchMemo()
         btn_back.setOnClickListener(this)
         fab_add.setOnClickListener(this)
 
         memoDb = MemoDatabase.getInstance(this)
 
-        rv_memo.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        rv_memo.layoutManager = LinearLayoutManager(this)
+        rv_memo.setHasFixedSize(true)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         fetchMemo()
     }
 
@@ -39,18 +47,14 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         et_name.setText(name)
     }
 
-    override fun onResume() {
-        super.onResume()
-        fetchMemo()
-    }
-
     fun fetchMemo() {
 
         GlobalScope.launch {
             val listMemo = memoDb?.memoDao()?.getAllMemo()
             runOnUiThread {
                 listMemo?.let {
-                    val adapter = MemoAdapter(it)
+                    val adapter =
+                        AdapterMemo(it)
                     rv_memo.adapter = adapter
                 }
             }
@@ -64,10 +68,15 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.fab_add -> {
                 val pop = MemoFragment()
-                    .newInstance(getString(R.string.add_memo))
+                    .newInstance()
                 val fragmentManager = supportFragmentManager
                 pop.show(fragmentManager, "fragment_dialog")
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        MemoDatabase.destroyInstance()
     }
 }

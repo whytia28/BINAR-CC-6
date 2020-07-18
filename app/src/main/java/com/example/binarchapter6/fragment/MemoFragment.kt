@@ -10,7 +10,7 @@ import com.example.binarchapter6.database.Memo
 import com.example.binarchapter6.database.MemoDatabase
 import kotlinx.android.synthetic.main.fragment_memo.*
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,9 +19,8 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
 
     private var memoDb: MemoDatabase? = null
 
-    fun newInstance(title: String): MemoFragment {
+    fun newInstance(): MemoFragment {
         val args = Bundle()
-        args.putString("title", title)
         val fragment = MemoFragment()
         fragment.arguments = args
         return fragment
@@ -37,12 +36,11 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val title = arguments?.getString("title", "Title")
-        dialog?.setTitle(title)
         edt_add_memo.requestFocus()
         dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.MATCH_PARENT)
 
         btn_add_memo.setOnClickListener(this)
+        btn_cancel.setOnClickListener(this)
 
         memoDb = this.activity?.let { MemoDatabase.getInstance(it) }
     }
@@ -60,7 +58,7 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
             R.id.btn_add_memo -> {
                 val date = getCurrentDate()
                 val objectMemo = Memo(null, edt_add_memo.text.toString(), date)
-                GlobalScope.async {
+                GlobalScope.launch {
                     val result = memoDb?.memoDao()?.insert(objectMemo)
                     activity?.runOnUiThread {
                         if (result != 0.toLong()) {
@@ -78,13 +76,17 @@ class MemoFragment : DialogFragment(), View.OnClickListener {
                         }
                         dialog?.dismiss()
                     }
+                    (activity as ProfileActivity).fetchMemo()
                 }
+            }
+            R.id.btn_cancel -> {
+                dialog?.dismiss()
             }
         }
     }
 
     private fun getCurrentDate(): String {
-        val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val date = Date()
 
         return dateFormat.format(date)

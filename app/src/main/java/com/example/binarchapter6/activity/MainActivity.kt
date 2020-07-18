@@ -9,12 +9,12 @@ import com.example.binarchapter6.R
 import com.example.binarchapter6.areaMain.PemainVsCpu
 import com.example.binarchapter6.areaMain.PemainVsPemain
 import kotlinx.android.synthetic.main.activity_main.*
-class MainActivity : AppCompatActivity(), View.OnClickListener  {
+
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     companion object {
         var namaPemain: String? = ""
     }
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

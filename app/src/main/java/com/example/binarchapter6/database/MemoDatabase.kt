@@ -26,9 +26,9 @@ abstract class MemoDatabase : RoomDatabase() {
             }
             return INSTANCE
         }
-    }
 
-    fun destroyInstance() {
-        INSTANCE = null
+        fun destroyInstance() {
+            INSTANCE = null
+        }
     }
 }
