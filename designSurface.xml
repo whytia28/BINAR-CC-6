@@ -2,6 +2,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/bg_button.xml" value="0.1" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/bg_button_disable.xml" value="0.1" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/ic_bookmark_selector.xml" value="0.1" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/ic_bookmark_white.xml" value="0.2015625" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/ic_error.xml" value="0.1" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/ic_loading.xml" value="0.1" />
+        <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/drawable/ic_share_blue.xml" value="0.1" />
         <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/layout/activity_course_reader.xml" value="0.18645833333333334" />
         <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Dicoding/JetpackPro/Academy/app/src/main/res/layout/content_detail_course.xml" value="0.1" />
