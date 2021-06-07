@@ -42,6 +42,10 @@
           <option name="url" value="https://github.com/Binar-Rsch/File-Processing.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/harmittaa/KoinExample.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\Dicoding" />
